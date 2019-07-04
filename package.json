@@ -14,7 +14,9 @@
     "test-extract-text": "webpack --config test/extractText/webpack.config.js",
     "test-hmr": "webpack-dev-server --config test/hmr/webpack.config.js --content-base ./test/hmr --hot --inline",
     "lint": "eslint lib test",
-    "appveyor:test": "npm test"
+    "appveyor:test": "npm test",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "keywords": [
     "sass",
@@ -40,7 +42,8 @@
     "clone-deep": "^0.2.4",
     "loader-utils": "^1.0.1",
     "lodash.tail": "^4.1.1",
-    "pify": "^2.3.0"
+    "pify": "^2.3.0",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "bootstrap-sass": "^3.3.5",
@@ -63,5 +66,6 @@
     "lib",
     "README",
     "LICENSE"
-  ]
+  ],
+  "snyk": true
 }
